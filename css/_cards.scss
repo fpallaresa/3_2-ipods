@@ -1,0 +1,77 @@
+.card {
+    width:450px;
+    background-color: $dark-color;
+    box-shadow: 5px 5px 5px 5px rgba($medium-color, 1);
+    border-radius: 10px;
+    margin: 100px 20px;
+    text-align: center;
+    padding: $spacing;
+
+    &__header {
+        margin:$spacing-down-xl;
+    }
+
+    &__title {
+        color:$light-color;
+        text-transform: uppercase;
+        font-size: $font-xl;
+        margin:$spacing-down-m;
+    }
+
+    &__image {
+        width: 40%;
+        margin:0 auto;
+    }
+
+    &__body {
+        text-align: left;
+        margin:$spacing-down-xl;
+    }
+
+    &__subtitle {
+        color: $light-color;
+        font-size: $font-m; 
+        margin:$spacing-down-s;
+    }
+
+    &__description {
+        color: $medium-color;
+        font-size: $font-s;
+    }
+
+    &__footer {
+        @include flexible;
+    }
+
+    &__button {
+        padding: $spacing - 5px;
+        background-color: $dark-color;
+        border:1px solid $light-color;
+        color: $light-color;
+        text-transform: uppercase;
+        cursor: pointer;
+    
+        &:hover {
+            background-color: $light-color;
+            color: $dark-color; 
+        }    
+    }
+
+    &--reverse {
+        background-color: $light-color;
+        .card__title, .card__subtitle  {
+            color:$dark-color;
+        }
+
+        .card__button {
+            background-color: $light-color;
+            border:1px solid $dark-color;
+            color: $dark-color;
+
+            &:hover {
+                background-color: $dark-color;
+                color: $light-color; 
+            } 
+        }
+    }
+}

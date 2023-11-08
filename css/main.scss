@@ -1,0 +1,14 @@
+@import 'variables';
+@import 'mixins';
+@import 'cards';
+
+body {
+    margin:0;
+    font-family:$fonts;
+    padding:$spacing;
+    @include flexible;
+}
+
+h2, h3, p {
+    margin:0;
+}
